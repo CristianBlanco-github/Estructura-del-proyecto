@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUDA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <script src="https://use.fontawesome.com/b29ce011be.js"></script>
 </head>
@@ -12,17 +13,15 @@
     <div class="ayuda-main"> 
         <header class="ayuda-header">
             <div class="inicio">
-                <h1><a href="../index.html"><img class="img1" src="../imagenes/inicio-de-pagina.PNG"></a></h1>
+                <h1><a href="../index.html"><img class="img-fluid" src="../imagenes/inicio-de-pagina.PNG"></a></h1>
             </div>
-            <div class="inicio">
-                <fieldset class="buscador1">
-                    <legend>Buscador:</legend>
-                    <input placeholder="Buscar productos" ><button><span>Buscar</span></button>
-                </fieldset>
+            <div class="inicio-input-group">
+                <input type="text" class="form-control" placeholder="Buscar producto"aria-describedby="button-addon2">
+                <button class="btn btn-dark animacionboton"id="button-addon2"><span>Buscar</span></button>
             </div>
             <div class="inicio">
                 <form action="./INICIAR-SESION.html">
-                    <button><span>INICIAR SESION</span></button>
+                    <button class="animacionboton"><span>INICIAR SESION</span></button>
                 </form>
             </div>
         </header>
@@ -34,50 +33,76 @@
             </ul>
             <i id="menuBurgerayuda" class="fa fa-bars"></i>
         </nav>
-        <section class="ayuda-section">
-            <article class="ayuda-article">
-                <label for="PREGUNTAS-FRECUENTES" >Preguntas Frecuentes:</label>
-                <br>
-                <select class="PREGUNTAS">
-                    <option value="S">PREGUNTAS</option>
-                    <option value="M">Descripcion</option>                        
-                </select>
-                <br>
-                <select class="PREGUNTAS">
-                    <option value="S">PREGUNTAS</option>
-                    <option value="M">Descripcion</option>                        
-                </select>
-                <br>
-                <select class="PREGUNTAS">
-                    <option value="S">PREGUNTAS</option>
-                    <option value="M">Descripcion</option>                        
-                </select>
-            </article>
-            <article class="ayuda-article">
-                <fieldset class="ayudas">
-                    <div>
-                        <h2 class="over-title">¿Cuál es tu consulta?</h2>
+        <section class="">
+          <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Realizar pedido
+                    </button>
+                    </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>¿Como realizo pedidos?</strong><br> textotextotextotexto.
                     </div>
-                    <div class="texto1">
-                        <p class="over-title">Para realizar una consulta es necesario que inicies sesión en tu cuenta</p>
-                        <button><span>INICIAR SESION</span></button>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Formas de pago
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>¿Cuáles son las formas de pago?</strong><br>textotextotextot.
                     </div>
-                </fieldset>
-            </article>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Garantias
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>¿Como funciona el servicio de Garantias?</strong><br> textotextotextotexto.
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card ayudaxd">
+              <div class="card-body">
+                <h5 class="card-title">¿Cuál es tu consulta?</h5>
+                <p class="card-text">Para realizar una consulta es necesario que inicies sesión en tu cuenta</p>
+                <button type="button" class="btn btn-dark animacionboton"><span>INICIAR SESION</span></button>
+              </div>
+            </div>
         </section>
         <footer class="ayuda-footer">
-            <div class="box1">
-                <a href="#"><img class="img4" src="../imagenes/Mi_galer_a.png"></a>
-            </div>
-            <div class="box2">
-                <h2>Trabája con nosotros</h2>
-                <a href="./FORMULARIO.html">Completa el formulario</a>
-            </div>
-            <div class="box3"> 
-                <h2>Siguenos en</h2>
-                <a href="#"><img src="../imagenes/facebook.png"></a><a href="#"><img src="../imagenes/logotipo-de-instagram.png"></a><a href="#"><img src="../imagenes/twitter.png"></a><a href="#"><img src="../imagenes/whatsapp.png"></a>
-            </div> 
-        </footer>
+          <div class="container-fluid ">
+              <div class="row">
+                  <ul class="nav justify-content-around p-3 mb-3">
+                      <li class="nav-item p-4 ">
+                          <img src="../imagenes/Mi_galer_a.png" class="img-fluid" alt="...">
+                      </li>
+                      <li class="nav-item p-4">
+                          <h2>Trabája con nosotros</h2>
+                          <a href="./FORMULARIO.html">Completa el formulario</a>
+                      </li>
+                      <li class="text-center">
+                          <h2>Siguenos en</h2>
+                          <a href="#"><img src="../imagenes/facebook.png" class="img-fluid" alt="..."></a>
+                          <a href="#"><img src="../imagenes/logotipo-de-instagram.png" class="img-fluid" alt="..."></a>
+                          <a href="#"><img src="../imagenes/twitter.png" class="img-fluid" alt="..."></a>
+                          <a href="#"><img src="../imagenes/whatsapp.png"class="img-fluid" alt="..."></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

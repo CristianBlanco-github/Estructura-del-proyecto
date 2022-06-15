@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCTOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <script src="https://use.fontawesome.com/b29ce011be.js"></script>
 </head>
@@ -12,17 +13,15 @@
     <div class="producto-main"> 
         <header class="producto-header">
             <div class="inicio">
-                <h1><a href="../index.html"><img class="img1" src="../imagenes/inicio-de-pagina.PNG"></a></h1>
+                <h1><a href="../index.html"><img class="img-fluid" src="../imagenes/inicio-de-pagina.PNG" class="img-fluid rounded-start" alt="..."></a></h1>
             </div>
-            <div class="inicio">
-                <fieldset class="buscador1">
-                    <legend>Buscador:</legend>
-                    <input placeholder="Buscar productos" ><button><span>Buscar</span></button>
-                </fieldset>
+            <div class="inicio-input-group">
+                <input type="text" class="form-control" placeholder="Buscar producto"aria-describedby="button-addon2">
+                <button class="btn btn-dark animacionboton"id="button-addon2"><span>Buscar</span></button>
             </div>
             <div class="inicio">
                 <form action="./INICIAR-SESION.html">
-                    <button><span>INICIAR SESION</span></button>
+                    <button class="animacionboton"><span>INICIAR SESION</span></button>
                 </form>
             </div>
         </header>
@@ -37,46 +36,119 @@
         <aside class="producto-aside">
             <h3>Menú Lateral</h3>
             <ul class="menulateral">
-                <li><a href="#">Procesadores</a></li>
-                <li><a href="#">Targetas de video</a></li>
-                <li><a href="#">Monitore</a></li>
-                <li><a href="#">Almacenimiento</a></li>
-                <li><a href="#">Memorias</a></li>
-                <li><a href="#">Perifericos</a></li>
-                <li><a href="#">Gabinetes</a></li>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Procesadores</option>
+                    <option value="1">Amd</option>
+                    <option value="2">Intel</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Targetas de video</option>
+                    <option value="1">Radeon</option>
+                    <option value="2">Nvidea</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Monitores</option>
+                    <option value="1">Gaming</option>
+                    <option value="2">Smartv</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Almacenimiento</option>
+                    <option value="1">scd</option>
+                    <option value="2">Disco solido</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Memoriass</option>
+                    <option value="1">dr4</option>
+                    <option value="2">dr5</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>perifericos</option>
+                    <option value="1">Camaras</option>
+                    <option value="2">Teclado</option>
+                    <option value="3">Mouse</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Gabinetes</option>
+                </select>
             </ul>
         </aside>
-        <section class="producto-section">
-            <article class="producto-article">
-                <a href="#"><img class="imgar" src="../imagenes/motorola-g60s.jpg..PNG"></a>
-                <p>Disco Solido SSD Team 512GB GX2 530MB/s</p>
-                <p>$7.500</p>
-                <button><span>sumar al carro</span></button>
-            </article>               
-            <article class="producto-article">
-                <a href="#"><img class="imgar" src="../imagenes/compragamer_Imganen_general_31686_Procesador_AMD_Ryzen_5_5600_4.4GHz_Turbo___Wraith_Stealth_Cooler_4f696861-grn.jpg"></a>
-                <p>Procesador AMD Ryzen 5 5600 4.4GHz Turbo + Wraith Stealth Cooler</p>
-                <p>$70.000</p>
-                <button><span>sumar al carro</span></button>
-            </article>
-            <article class="producto-article">
-                <a href="#"><img class="imgar" src="../imagenes/compragamer_Imganen_general_32388_Placa_de_Video_Zotac_GeForce_RTX_3090_24GB_GDDR6X_Trinity_14af4797-grn.jpg"></a>
-                <p>Placa de Video Zotac GeForce RTX 3090 24GB GDDR6X Trinity</p>
-                <p>$330.800</p>
-                <button><span>sumar al carro</span></button>
-            </article>
+        <section >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="card mt-3 mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="../imagenes/motorola-g60s.jpg..PNG" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Disco Solido SSD Team 512GB GX2 530MB/s</h4>
+                                        <span class="p-1"><strong>7500</strong></span>
+                                        <br>
+                                        <button type="button" class="btn btn-dark animacionboton"><span>Sumar al carro</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="card mt-3 mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="../imagenes/compragamer_Imganen_general_31686_Procesador_AMD_Ryzen_5_5600_4.4GHz_Turbo___Wraith_Stealth_Cooler_4f696861-grn.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Procesador AMD Ryzen 5 5600 4.4GHz Turbo + Wraith Stealth Cooler</h4>                                       
+                                        <span class="p-1"><strong>$70.000</strong></span>
+                                        <br>
+                                        <button type="button" class="btn btn-dark animacionboton"><span>Sumar al carro</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="card mt-3 mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="../imagenes/compragamer_Imganen_general_32388_Placa_de_Video_Zotac_GeForce_RTX_3090_24GB_GDDR6X_Trinity_14af4797-grn.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Placa de Video Zotac GeForce RTX 3090 24GB GDDR6X Trinity</h4>                                   
+                                        <span class="p-1"><strong>350.000</strong></span>
+                                        <br>
+                                        <button type="button" class="btn btn-dark animacionboton"><span>Sumar al carro</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <footer class="producto-footer">
-            <div class="box1">
-                <a href="#"><img class="img4" src="../imagenes/Mi_galer_a.png"></a>
-            </div>
-            <div class="box2">
-                <h2>Trabája con nosotros</h2>
-                <a href="./FORMULARIO.html">Completa el formulario</a>
-            </div>                   
-            <div class="box3"> 
-                <h2>Siguenos en</h2>
-                <a href="#"><img src="../imagenes/facebook.png"></a><a href="#"><img src="../imagenes/logotipo-de-instagram.png"></a><a href="#"><img src="../imagenes/twitter.png"></a><a href="#"><img src="../imagenes/whatsapp.png"></a>
+            <div class="container-fluid ">
+                <div class="row">
+                    <ul class="nav justify-content-around p-3 mb-3">
+                        <li class="nav-item p-4 ">
+                            <img src="../imagenes/Mi_galer_a.png" class="img-fluid" alt="...">
+                        </li>
+                        <li class="nav-item p-4">
+                            <h2>Trabája con nosotros</h2>
+                            <a href="./FORMULARIO.html">Completa el formulario</a>
+                        </li>
+                        <li class="text-center">
+                            <h2>Siguenos en</h2>
+                            <a href="#"><img src="../imagenes/facebook.png" class="img-fluid" alt="..."></a>
+                            <a href="#"><img src="../imagenes/logotipo-de-instagram.png" class="img-fluid" alt="..."></a>
+                            <a href="#"><img src="../imagenes/twitter.png" class="img-fluid" alt="..."></a>
+                            <a href="#"><img src="../imagenes/whatsapp.png"class="img-fluid" alt="..."></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </footer>
     </div>
