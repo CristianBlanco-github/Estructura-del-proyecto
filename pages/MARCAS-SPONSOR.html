@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARCA SPONSOR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <script src="https://use.fontawesome.com/b29ce011be.js"></script>
 </head>
@@ -13,17 +14,15 @@
     <div class="marca-main"> 
         <header class="marca-header">
             <div class="inicio">
-                <h1><a href="../index.html"><img class="img1" src="../imagenes/inicio-de-pagina.PNG"></a></h1>
+                <h1><a href="../index.html"><img class="img-fluid" src="../imagenes/inicio-de-pagina.PNG"></a></h1>
             </div>
-            <div class="inicio">
-                <fieldset class="buscador1">
-                    <legend>Buscador:</legend>
-                    <input placeholder="Buscar productos" ><button><span>Buscar</span></button>
-                </fieldset>
+            <div class="inicio-input-group">
+                <input type="text" class="form-control" placeholder="Buscar producto"aria-describedby="button-addon2">
+                <button class="btn btn-dark animacionboton"id="button-addon2"><span>Buscar</span></button>
             </div>
             <div class="inicio">
                 <form action="./INICIAR-SESION.html">
-                    <button><span>INICIAR SESION</span></button>
+                    <button class="animacionboton"><span>INICIAR SESION</span></button>
                 </form>
             </div>
         </header>
@@ -37,31 +36,41 @@
         </nav>
         <section class="marca-section">
             <article>
-                <a href="#"><img class="img1" src="../imagenes/movistar.jpg"></a>
+                <a href="#"><img class="img-fluid" src="../imagenes/movistar.jpg"></a>
             </article>
             <article>
-                <a href="#"><img class="img1" src="../imagenes/nvidea.jpg"></a>
+                <a href="#"><img class="img-fluid" src="../imagenes/nvidea.jpg"></a>
             </article> 
             <article>
-                <a href="#"><img class="img1" src="../imagenes/RAZER-PHONE.jpg"></a>
+                <a href="#"><img class="img-fluid" src="../imagenes/RAZER-PHONE.jpg"></a>
             </article>
             <article>
-                <a href="#"><img class="img1" src="../imagenes/hyper.jpg"></a>
+                <a href="#"><img class="img-fluid" src="../imagenes/hyper.jpg"></a>
             </article>
         </section>
         <footer class="marca-footer">
-            <div class="box1">
-                <a href="#"><img class="img4" src="../imagenes/Mi_galer_a.png"></a>
-            </div>
-            <div class="box2">
-                <h2>Trabája con nosotros</h2>
-                <a href="./FORMULARIO.html">Completa el formulario</a>
-            </div>
-            <div class="box3">
-                <h2>Siguenos en</h2>
-                <a href="#"><img src="../imagenes/facebook.png"></a><a href="#"><img src="../imagenes/logotipo-de-instagram.png"></a><a href="#"><img src="../imagenes/twitter.png"></a><a href="#"><img src="../imagenes/whatsapp.png"></a>
+            <div class="container-fluid ">
+                <div class="row">
+                    <ul class="nav justify-content-around p-3 mb-3">
+                        <li class="nav-item p-4 ">
+                            <img src="../imagenes/Mi_galer_a.png" class="img-fluid" alt="...">
+                        </li>
+                        <li class="nav-item p-4">
+                            <h2>Trabája con nosotros</h2>
+                            <a href="./FORMULARIO.html">Completa el formulario</a>
+                        </li>
+                        <li class="text-center">
+                            <h2>Siguenos en</h2>
+                            <a href="#"><img src="../imagenes/facebook.png" class="img-fluid" alt="..."></a>
+                            <a href="#"><img src="../imagenes/logotipo-de-instagram.png" class="img-fluid" alt="..."></a>
+                            <a href="#"><img src="../imagenes/twitter.png" class="img-fluid" alt="..."></a>
+                            <a href="#"><img src="../imagenes/whatsapp.png"class="img-fluid" alt="..."></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
