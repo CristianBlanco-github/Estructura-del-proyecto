@@ -24,55 +24,39 @@
                     <button class="animacionboton"><span>INICIAR SESION</span></button>
                 </form>
             </div>
+            <div class="inicio">
+                <i class="bi bi-cart-plus-fill"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+            </div>
         </header>
-        <nav class="producto-nav">
-            <ul class="fondo-verde">              
-                <li><a href="./PRODUCTOS.html">productos</a></li>
-                <li><a href="./AYUDA.html">ayuda</a></li>
-                <li><a href="./MARCAS-SPONSOR.html">marca sponsor</a></li>           
-            </ul>
-            <i id="menuBurgerproduc" class="fa fa-bars"></i>
-        </nav>
-        <aside class="producto-aside">
-            <h3>Menú Lateral</h3>
-            <ul class="menulateral">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Procesadores</option>
-                    <option value="1">Amd</option>
-                    <option value="2">Intel</option>
-                </select>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Targetas de video</option>
-                    <option value="1">Radeon</option>
-                    <option value="2">Nvidea</option>
-                </select>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Monitores</option>
-                    <option value="1">Gaming</option>
-                    <option value="2">Smartv</option>
-                </select>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Almacenimiento</option>
-                    <option value="1">scd</option>
-                    <option value="2">Disco solido</option>
-                </select>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Memoriass</option>
-                    <option value="1">dr4</option>
-                    <option value="2">dr5</option>
-                </select>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>perifericos</option>
-                    <option value="1">Camaras</option>
-                    <option value="2">Teclado</option>
-                    <option value="3">Mouse</option>
-                </select>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Gabinetes</option>
-                </select>
-            </ul>
-        </aside>
-        <section >
+        <div class="container-fluid producto-nav ">
+            <!-- BARRA NAVEGACIÓN -->
+            <div class="row">
+                <nav class="navbar navbar-expand-md navbar-success bg-successt border-3 border-bottom border-primary ">
+                    <div class="container-fluid">
+                        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>                   
+                    <div id="MenuNavegacion" class="navbar-collapse collapse">
+                        <ul class="fondo-verde navindex navbar-nav ms-1">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./PRODUCTOS.html">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./AYUDA.html">Ayuda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./MARCAS-SPONSOR.html">Marca Sponsor</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </div>
+        <section class="producto-section" >
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-xl-4">
@@ -129,6 +113,44 @@
                 </div>
             </div>
         </section>
+        <aside class="producto-aside">
+            <div class="menulateral">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Procesadores</option>
+                    <option value="1">Amd</option>
+                    <option value="2">Intel</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Targetas de video</option>
+                    <option value="1">Radeon</option>
+                    <option value="2">Nvidea</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Monitores</option>
+                    <option value="1">Gaming</option>
+                    <option value="2">Smartv</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Almacenimiento</option>
+                    <option value="1">scd</option>
+                    <option value="2">Disco solido</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Memoriass</option>
+                    <option value="1">dr4</option>
+                    <option value="2">dr5</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>perifericos</option>
+                    <option value="1">Camaras</option>
+                    <option value="2">Teclado</option>
+                    <option value="3">Mouse</option>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Gabinetes</option>
+                </select>
+            </div>
+        </aside>
         <footer class="producto-footer">
             <div class="container-fluid ">
                 <div class="row">

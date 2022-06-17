@@ -25,15 +25,38 @@
                     <button class="animacionboton"><span>INICIAR SESION</span></button> 
                 </form>
             </div>
+            <div class="inicio">
+                <i class="bi bi-cart-plus-fill"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+            </div>
         </header>
-        <nav class="sesion-nav">
-            <ul class="menu-sesion">              
-                <li><a href="./PRODUCTOS.html">productos</a></li>
-                <li><a href="./AYUDA.html">ayuda</a></li>
-                <li><a href="./MARCAS-SPONSOR.html">marca sponsor</a></li>           
-            </ul>
-            <i id="menuBurgersesion" class="fa fa-bars"></i>
-        </nav>
+        <div class="container-fluid">
+            <!-- BARRA NAVEGACIÓN -->
+            <div class="row">
+                <nav class="navbar navbar-expand-md navbar-success bg-successt border-3 border-bottom border-primary ">
+                    <div class="container-fluid">
+                        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>                   
+                    <div id="MenuNavegacion" class="navbar-collapse collapse">
+                        <ul class="navindex navbar-nav ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./PRODUCTOS.html">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./AYUDA.html">Ayuda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./MARCAS-SPONSOR.html">Marca Sponsor</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </div>
         <section class="sesion-section">
             <form>
                 <fieldset class="sesion">

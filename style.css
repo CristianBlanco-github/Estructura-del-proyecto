@@ -3,19 +3,19 @@ body{
     background-color: rgb(238, 238, 238);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-#index-main{
-    width: 100%;
-    height: 100px;
-}
 footer,
-nav {
+nav{
     background-color:rgb(253, 97, 26);
 }
-
-nav ul li {
+.producto-nav{
+    background-color:rgb(253, 97, 26);
+}
+.nav-link{
+    font-size: 24;
+}
+ul li {
     display: inline;
 }
-
 ul {
     list-style-type: none;
     font-size:24px ;
@@ -24,15 +24,14 @@ ul {
 .link-formu{
     font-size: 16px;
 }
-a,h2{
-    text-decoration: none;
+a,h2,.nav-link{
+
     color: #000000;
 }
-a:hover {
+a,.nav-link:hover {
     color: #ffffff;
     cursor: pointer
 }
-
 header{
     padding: 5px;
     margin: 0px
@@ -86,12 +85,7 @@ flex-direction: row;
 align-items: center;
 justify-content: space-around;
 }
-.index-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
+
 /***imput engeneral***/
 .inicio-input-group{
     display: flex;
@@ -103,8 +97,8 @@ justify-content: space-around;
     position: relative;
     align-items: center;
     justify-content: space-around;
-
 }
+
 /***Productos***/
 .menulateral{
     font-size: 16px;
@@ -112,7 +106,6 @@ justify-content: space-around;
 }
 
 /***ayuda celdas***/
-
 #accordionExample{
     width: 100%;
     margin: 0 auto;
@@ -121,7 +114,7 @@ justify-content: space-around;
 .ayudaxd{
     width: auto;
     right: auto;
-margin:10px 50px 10px 50px;
+    margin:10px 50px 10px 50px;
 
 }
 /***formulario***/
@@ -171,12 +164,7 @@ margin:10px 50px 10px 50px;
     align-items: center;
     justify-content: space-around;
 }
-.producto-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
+
 .producto-main{
     display: grid;
 }
@@ -189,27 +177,8 @@ margin:10px 50px 10px 50px;
     align-items: center;
     justify-content: space-around;
 }
-.ayuda-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
+
 /***Marca diseño grid***/
-.marca-header {
-    grid-area: marca-header;
-    justify-content: space-between;
-}
-.marca-footer {
-    grid-area: marca-footer;
-    justify-content: center;
-}
-.marca-nav {
-    grid-area: marca-nav;
-}
-.marca-section{
-    grid-area: marca-section;
-}
 .marca-header{
     display: flex;
     flex-wrap: wrap;
@@ -217,15 +186,8 @@ margin:10px 50px 10px 50px;
     align-items: center;
     justify-content: space-around;
 }
-.marca-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-.marca-main,.marca-section{
-    display: grid;
-}
+
+
 
 /***Sesion area***/
 .sesion-header{
@@ -235,13 +197,6 @@ margin:10px 50px 10px 50px;
     align-items: center;
     justify-content: space-around;
 }
-.sesion-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
 /***Formulario area***/
 .formu-header{
     display: flex;
@@ -250,27 +205,7 @@ margin:10px 50px 10px 50px;
     align-items: center;
     justify-content: space-around;
 }
-.formu-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-@media screen and (min-width: 320px) {
-
-    /***Media Index***/
-    #menuBurger{
-        margin-left: 10px;
-    }
-    #ulNav{
-        display: none;
-    }
-    .index-nav{
-        display: flex;
-        justify-content: space-between;
-        height: 56px;
-    }
-    
+@media screen and (min-width: 320px) {    
     /***Media Producto***/
     .producto-main{
         grid-template-columns: auto;
@@ -279,88 +214,32 @@ margin:10px 50px 10px 50px;
         row-gap: 15px;
         grid-template-areas: "producto-header" "producto-nav" "producto-section" "producto-footer";
     }
-    .producto-nav{
-        display: flex;
-        justify-content: space-between;
-        height: 56px; 
+    .producto-section {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 15px;
+        row-gap: 15px;
+        justify-items: stretch;
+        align-items: stretch;
     }
-    #menuBurgerproduc{
-        margin-left: 10px;
-    }
-    .producto-aside,.fondo-verde{
+    .producto-aside{
         display: none;
     }
-
     /***Media ayuda***/
-    .ayuda-nav{
-        display: flex;
-        justify-content: space-between;
-        height: 56px;
-    }
     #menuBurgerayuda{
         margin-left: 10px;
     }
 
     /***Media formulario***/
-    .formu-nav{
-        display: flex;
-        justify-content: space-between;
-        height: 56px; 
-    }
-    .menu-formu{
-        display: none;
-    }
-    #menuBurgerformu{
-        margin-left: 10px;
-    }
     .postularme{
         padding: 15px;
         margin: 0px;
     }
 
     /***Media Marca ***/
-    .marca-main{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
-        column-gap: 15px;
-        row-gap: 15px;
-        grid-template-areas: "marca-header" "marca-nav" "marca-section" "marca-footer";
-    }
-    .marca-section {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-        column-gap: 15px;
-        row-gap: 15px;
-        justify-items: stretch;
-        align-items: stretch;
-        text-align: center;
-    }
-    .marca-nav{
-        display: flex;
-        justify-content: space-between;
-        height: 56px; 
-    }
-    #menuBurgermarca{
-        margin-left: 10px;
-    }
-    .menu-marca{
-        display: none;
-    }
-
     /***Media sesion***/
-    .menu-sesion{
-        display: none;
-    }
-    .sesion-nav{
-        display: flex;
-        justify-content: space-between;
-        height: 56px; 
-    }
     h2,a{
         font-size: 16px;
-    }
-    #menuBurgersesion{
-        margin-left: 10px;
     }
     .sesion{
         text-align: center;
@@ -372,28 +251,21 @@ margin:10px 50px 10px 50px;
 
 @media screen and (min-width: 600px) {}
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        flex-basis: auto;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+    }
+}
 
 @media screen and (min-width: 1024px) {}
 
 @media screen and (min-width: 1200px) {
-
     /***Media Index***/
-    #index-main{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
-        column-gap: 0px;
-        row-gap: 0px;
-        grid-template-areas: "index-header index-header" "index-nav index-nav" "index-section index-section" "index-footer index-footer";
-    }
-    #menuBurger {
-        display: none; 
-    }
-    #ulNav{
-        display: block;
-        margin-left: 300px;
-    }
-
     /***Media producto***/
     .producto-main{
         grid-template-columns: auto auto;
@@ -410,74 +282,23 @@ margin:10px 50px 10px 50px;
         justify-items: stretch;
         align-items: stretch;
     }
-    #menuBurgerproduc{
-        display: none;
-    }
-    .fondo-verde{
-        display: block;
-        margin-left: 300px;
-    }
     .producto-aside{
         display: block;
     }
 
     /***Media ayuda***/
-    #menuBurgerayuda{
-        display: none;
-    }
-    .menu-ayuda{
-        display: block;
-        margin-left: 300px;
-    }
-
     /***Media formulario***/
-    .menu-formu{
-        display: block;
-        margin-left: 300px;
-    }
-    #menuBurgerformu{
-        display: none;
-    }
     .postularme{
         padding: 30px;
         margin: 20px;
     }
     
     /***Media MARCA***/
-    .marca-main{
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto auto;
-        column-gap: 10px;
-        row-gap: 20px;
-        grid-template-areas: "marca-header marca-header" "marca-nav marca-nav" "marca-section marca-section" "marca-footer marca-footer";
-    }
-    .marca-section {
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        column-gap: 15px;
-        row-gap: 15px;
-        justify-items: stretch;
-        align-items: stretch;
-    }
-
-    #menuBurgermarca{
-        display: none;
-    }
-    .menu-marca{
-        display: block;
-        margin-left: 300px;
-    }
     /***Media sesion***/
-    .menu-sesion{
-        display: block;
-        margin-left: 300px;
-    }
     h2,a{
         font-size: 24px;
     }
-    #menuBurgersesion{
-        display: none;
-    }
+
 }
 
 
