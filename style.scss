@@ -1,0 +1,332 @@
+@import"colores";
+/***Diseño en general***/
+body{
+    background-color: $colorPrimario;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer{
+    background-color: $colorSecundario;
+}
+nav{
+    background-color: $colorSecundario;
+}
+.producto-nav{
+    background-color:$colorSecundario;
+}
+.nav-link{
+    font-size: 24;
+}
+ul{
+    list-style-type: none;
+    font-size:24px ;
+    text-transform:uppercase ;
+    li{
+        display: inline;
+    }
+}
+.link-formu{
+    font-size: 16px;
+}
+a{
+    color: $colorTercero;
+}
+h2{
+    color: $colorTercero;
+}
+.nav-link{
+    color: $colorTercero;
+}
+a{
+    &:hover{
+        color: $colorCuarto;
+    } 
+    
+}
+.nav-link{
+    &:hover{
+        color: $colorCuarto;
+    }
+}
+header{
+    padding: 5px;
+    margin: 0px
+}
+nav{
+    ul{
+        a{
+            padding: 30px;  
+        } 
+    } 
+}
+
+/***Botones animacion ***/
+.animacionboton{
+    text-decoration: none;
+    color: $colorCuarto;
+    
+}
+input{
+    text-decoration: none;
+    color: $colorCuarto;
+}
+.animacionboton {
+    border-radius: 5px;
+    background-color: $colorTercero;
+    padding: 3px;
+    width:auto;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s ease all;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+.animacionboton{
+    span{position: relative;
+    transition: .3s ease all;
+    z-index: 2;
+}
+}
+.animacionboton::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background:$colorSecundario;
+    position:absolute;
+    z-index: 1;
+    top: -80px;
+    left: 0;
+    transition: .3s ease-in-out all;
+}
+.animacionboton:hover::after{
+    top:0;
+}
+
+/***index***/
+.index-header{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+}
+
+/***imput engeneral***/
+.inicio-input-group{
+    display: flex;
+}
+.btn{
+    background-color: $colorTercero;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/***Productos***/
+.menulateral{
+    font-size: 16px;
+    text-transform: none;
+}
+
+/***ayuda celdas***/
+#accordionExample{
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+}
+.ayudaxd{
+    width: auto;
+    right: auto;
+    margin:10px 50px 10px 50px;
+}
+/***formulario***/
+.postularme{
+    background-color: $colorCuarto;
+    border-radius: 15px;
+}
+.postularmemas{
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    border-radius: 15px;
+}
+
+/***sesion***/
+.sesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colorCuarto;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/***Producto diseño grid***/
+.producto-header{
+    grid-area: producto-header;
+    justify-content: space-between;
+}
+.producto-footer{
+    grid-area: producto-footer;
+    justify-content: center;
+}
+.producto-nav{
+    grid-area: producto-nav;
+}
+.producto-aside{
+    grid-area: producto-aside;
+}
+.producto-section{
+    grid-area:producto-section;
+}
+.producto-header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.producto-main{
+    display: grid;
+}
+
+/***Ayuda diseño***/
+.ayuda-header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/***Marca diseño grid***/
+.marca-header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+/***Sesion area***/
+.sesion-header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+/***Formulario area***/
+.formu-header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+@media screen and (min-width: 320px) {    
+    /***Media Producto***/
+    .producto-main{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        column-gap: 15px;
+        row-gap: 15px;
+        grid-template-areas: "producto-header" "producto-nav" "producto-section" "producto-footer";
+    }
+    .producto-section {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 15px;
+        row-gap: 15px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    .producto-aside{
+        display: none;
+    }
+    /***Media ayuda***/
+    #menuBurgerayuda{
+        margin-left: 10px;
+    }
+
+    /***Media formulario***/
+    .postularme{
+        padding: 15px;
+        margin: 0px;
+    }
+
+    /***Media Marca ***/
+    /***Media sesion***/
+    h2{
+        font-size: 16px; 
+        a{
+            font-size: 16px;
+        } 
+    }
+    .sesion{
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+}
+@media screen and (min-width: 480px) {}
+
+@media screen and (min-width: 600px) {}
+
+@media screen and (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        flex-basis: auto;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        white-space: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1200px) {
+    /***Media Index***/
+    /***Media producto***/
+    .producto-main{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        column-gap: 10px;
+        row-gap: 20px;
+        grid-template-areas: "producto-header producto-header" "producto-nav producto-nav" "producto-aside producto-section" "producto-footer producto-footer";
+    }
+    .producto-section {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 15px;
+        row-gap: 15px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    .producto-aside{
+        display: block;
+    }
+
+    /***Media ayuda***/
+    /***Media formulario***/
+    .postularme{
+        padding: 30px;
+        margin: 20px;
+    }
+    
+    /***Media MARCA***/
+    /***Media sesion***/
+    h2{
+        font-size: 24px;
+        a{
+            font-size: 24px;
+        }
+    }
+}
