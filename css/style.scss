@@ -1,5 +1,19 @@
 @import"colores";
-/***Diseño en general***/
+/* Vars */
+$tamanoPad: 20px;
+$tamanoTipo: 24px;
+/***Mixin***/
+@mixin flex-wrap-row-center-space-around{
+	display:flex;
+    flex-wrap: wrap;
+	flex-direction:row;
+	align-items:center;
+    justify-content: space-around;
+}
+/***Mapa***/
+$coloresRedes: (facebook: rgb(3, 81, 189), whatsapp: rgb(1, 209, 149), istagram: rgb(237, 83, 107), twitter:rgb(0, 221, 229)); 
+
+/***Estilos generales ***/
 body{
     background-color: $colorPrimario;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -14,11 +28,11 @@ nav{
     background-color:$colorSecundario;
 }
 .nav-link{
-    font-size: 24;
+    font-size: $tamanoTipo;
 }
 ul{
     list-style-type: none;
-    font-size:24px ;
+    font-size:$tamanoTipo ;
     text-transform:uppercase ;
     li{
         display: inline;
@@ -36,15 +50,20 @@ h2{
 .nav-link{
     color: $colorTercero;
 }
-a{
+.link-formu{
     &:hover{
         color: $colorCuarto;
-    } 
-    
+    }
 }
 .nav-link{
     &:hover{
         color: $colorCuarto;
+    }
+}
+.aside-textos{
+    text-decoration: none;
+    &:hover{
+        color: $colorSecundario;
     }
 }
 header{
@@ -58,12 +77,25 @@ nav{
         } 
     } 
 }
-
+.cir{
+    border-radius: 50px;
+}
+/***Redes ***/
+@each $red, $color in $coloresRedes {
+    .#{$red}{
+        background-color:$color ;
+    }
+    
+}
+/***Aqui aplicamos extend ***/
+.telegrama{
+    @extend .cir;
+    background-color: map-get($coloresRedes, twitter)
+}
 /***Botones animacion ***/
 .animacionboton{
-    text-decoration: none;
-    color: $colorCuarto;
-    
+        text-decoration: none;
+        color: $colorCuarto;
 }
 input{
     text-decoration: none;
@@ -82,16 +114,18 @@ input{
     overflow: hidden;
 }
 .animacionboton{
-    span{position: relative;
-    transition: .3s ease all;
-    z-index: 2;
-}
+    span{
+        position: relative;
+        transition: .3s ease all;
+        z-index: 2;
+    }
+    
 }
 .animacionboton::after{
     content: "";
     width: 100%;
     height: 100%;
-    background:$colorSecundario;
+    background: $colorSecundario;
     position:absolute;
     z-index: 1;
     top: -80px;
@@ -101,14 +135,9 @@ input{
 .animacionboton:hover::after{
     top:0;
 }
-
 /***index***/
 .index-header{
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
+    @include flex-wrap-row-center-space-around;
 }
 
 /***imput engeneral***/
@@ -118,7 +147,7 @@ justify-content: space-around;
 .btn{
     background-color: $colorTercero;
     display: flex;
-    padding: 20px;
+    padding: $tamanoPad;
     position: relative;
     align-items: center;
     justify-content: space-around;
@@ -160,7 +189,7 @@ justify-content: space-around;
     align-items: center;
     background-color: $colorCuarto;
     border-radius: 15px;
-    padding: 20px;
+    padding: $tamanoPad;
 }
 
 /***Producto diseño grid***/
@@ -182,11 +211,7 @@ justify-content: space-around;
     grid-area:producto-section;
 }
 .producto-header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    @include flex-wrap-row-center-space-around;
 }
 
 .producto-main{
@@ -195,39 +220,22 @@ justify-content: space-around;
 
 /***Ayuda diseño***/
 .ayuda-header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    @include flex-wrap-row-center-space-around;
 }
 
 /***Marca diseño grid***/
 .marca-header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    @include flex-wrap-row-center-space-around;
 }
-
-
 
 /***Sesion area***/
 .sesion-header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    @include flex-wrap-row-center-space-around;
 }
+
 /***Formulario area***/
 .formu-header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    @include flex-wrap-row-center-space-around;
 }
 @media screen and (min-width: 320px) {    
     /***Media Producto***/
@@ -280,12 +288,7 @@ justify-content: space-around;
 
 @media screen and (min-width: 768px) {
     .navbar-expand-md .navbar-collapse {
-        flex-basis: auto;
-        display: flex !important;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
+        @include flex-wrap-row-center-space-around;
         white-space: 16px;
     }
 }
@@ -299,7 +302,7 @@ justify-content: space-around;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto auto auto;
         column-gap: 10px;
-        row-gap: 20px;
+        row-gap: $tamanoPad;
         grid-template-areas: "producto-header producto-header" "producto-nav producto-nav" "producto-aside producto-section" "producto-footer producto-footer";
     }
     .producto-section {
@@ -318,15 +321,15 @@ justify-content: space-around;
     /***Media formulario***/
     .postularme{
         padding: 30px;
-        margin: 20px;
+        margin: $tamanoPad;
     }
     
     /***Media MARCA***/
     /***Media sesion***/
     h2{
-        font-size: 24px;
+        font-size: $tamanoTipo;
         a{
-            font-size: 24px;
+            font-size: $tamanoTipo;
         }
     }
 }

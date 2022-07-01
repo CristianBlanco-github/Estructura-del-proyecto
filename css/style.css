@@ -1,5 +1,8 @@
 @charset "UTF-8";
-/***Diseño en general***/
+/* Vars */
+/***Mixin***/
+/***Mapa***/
+/***Estilos generales ***/
 body {
   background-color: rgb(238, 238, 238);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -18,7 +21,7 @@ nav {
 }
 
 .nav-link {
-  font-size: 24;
+  font-size: 24px;
 }
 
 ul {
@@ -46,12 +49,19 @@ h2 {
   color: #000000;
 }
 
-a:hover {
+.link-formu:hover {
   color: white;
 }
 
 .nav-link:hover {
   color: white;
+}
+
+.aside-textos {
+  text-decoration: none;
+}
+.aside-textos:hover {
+  color: rgb(253, 97, 26);
 }
 
 header {
@@ -61,6 +71,32 @@ header {
 
 nav ul a {
   padding: 30px;
+}
+
+.cir, .telegrama {
+  border-radius: 50px;
+}
+
+/***Redes ***/
+.facebook {
+  background-color: rgb(3, 81, 189);
+}
+
+.whatsapp {
+  background-color: rgb(1, 209, 149);
+}
+
+.istagram {
+  background-color: rgb(237, 83, 107);
+}
+
+.twitter {
+  background-color: rgb(0, 221, 229);
+}
+
+/***Aqui aplicamos extend ***/
+.telegrama {
+  background-color: rgb(0, 221, 229);
 }
 
 /***Botones animacion ***/
@@ -298,12 +334,11 @@ input {
 }
 @media screen and (min-width: 768px) {
   .navbar-expand-md .navbar-collapse {
-    flex-basis: auto;
-    display: flex !important;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
     white-space: 16px;
   }
 }
