@@ -1,7 +1,6 @@
 @import"colores";
-/* Vars */
-$tamanoPad: 20px;
-$tamanoTipo: 24px;
+@import "vars";
+@import"mapas";
 /***Mixin***/
 @mixin flex-wrap-row-center-space-around{
 	display:flex;
@@ -10,9 +9,6 @@ $tamanoTipo: 24px;
 	align-items:center;
     justify-content: space-around;
 }
-/***Mapa***/
-$coloresRedes: (facebook: rgb(3, 81, 189), whatsapp: rgb(1, 209, 149), istagram: rgb(237, 83, 107), twitter:rgb(0, 221, 229)); 
-
 /***Estilos generales ***/
 body{
     background-color: $colorPrimario;
@@ -92,49 +88,158 @@ nav{
     @extend .cir;
     background-color: map-get($coloresRedes, twitter)
 }
-/***Botones animacion ***/
-.animacionboton{
-        text-decoration: none;
-        color: $colorCuarto;
-}
-input{
+/***Botones generales ***/
+.animacionboton input{
     text-decoration: none;
     color: $colorCuarto;
 }
-.animacionboton {
-    border-radius: 5px;
-    background-color: $colorTercero;
-    padding: 3px;
-    width:auto;
-    height: 30px;
-    cursor: pointer;
-    transition: .3s ease all;
-    border: none;
-    position: relative;
-    overflow: hidden;
+.animacionboton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+	width: 200px;
+	height: 30px;
+	background:$colorTercero ;
+	color: $colorCuarto;
+	font-size: 15px;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden
 }
 .animacionboton{
-    span{
-        position: relative;
-        transition: .3s ease all;
-        z-index: 2;
-    }
-    
+span{
+    position: relative;
+    transition: .3s ease all;
+    z-index: 2;
 }
-.animacionboton::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: $colorSecundario;
-    position:absolute;
-    z-index: 1;
-    top: -80px;
-    left: 0;
-    transition: .3s ease-in-out all;
 }
-.animacionboton:hover::after{
-    top:0;
+.animacionboton::after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .3s ease-in-out all;
+	border-radius: 190px;
+	transform-origin: center;
 }
+.animacionboton:hover::after {
+	transform: scale(100);
+	background: $colorSecundario;
+}
+.animacionboton:hover {
+	background: rgb(168, 64, 17); 
+}
+
+/**** Botones de productos ****/
+.animacionbotonpro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+	width: 200px;
+	height: 30px;
+	background: $colorTercero;
+	color: $colorCuarto;
+	font-size: 15px;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden
+}
+.animacionbotonpro{
+span{
+    position: relative;
+    transition: .3s ease all;
+    z-index: 2;
+}
+}
+.animacionbotonpro span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 23%;
+}
+.animacionbotonpro .iconopro {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+.animacionbotonpro svg {
+	color: $colorCuarto;
+	width: 35px;
+	height: 35px;
+}
+.animacionbotonpro:hover {
+	background: $colorSecundario;
+}
+.animacionbotonpro:hover .iconopro {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+.animacionbotonpro:hover span {
+	left: 20px;
+}
+
+/**** Botones de formulario ****/
+.animacionbotonfor{
+	width: 200px;
+	height: 30px;
+	background: $colorTercero;
+	color: $colorCuarto;
+	font-size: 15px;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden
+}
+.animacionbotonfor{
+span{
+    position: relative;
+    transition: .3s ease all;
+    z-index: 2;
+}
+}
+.animacionbotonfor::after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .3s ease-in-out all;
+	border-radius: 190px;
+	transform-origin: center;
+}
+.animacionbotonfor:hover::after {
+	transform: scale(100);
+	background: $colorSecundario;
+}
+.animacionbotonfor:hover {
+	background: rgb(168, 64, 17); 
+}
+
 /***index***/
 .index-header{
     @include flex-wrap-row-center-space-around;
@@ -145,14 +250,11 @@ input{
     display: flex;
 }
 .btn{
-    background-color: $colorTercero;
     display: flex;
-    padding: $tamanoPad;
-    position: relative;
+    
     align-items: center;
     justify-content: space-around;
 }
-
 /***Productos***/
 .menulateral{
     font-size: 16px;
@@ -237,6 +339,7 @@ input{
 .formu-header{
     @include flex-wrap-row-center-space-around;
 }
+
 @media screen and (min-width: 320px) {    
     /***Media Producto***/
     .producto-main{
@@ -263,9 +366,19 @@ input{
     }
 
     /***Media formulario***/
+    .formu-section{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
     .postularme{
-        padding: 15px;
-        margin: 0px;
+        width: 100%;
+        right: 50%;
+        padding: 30px;
+        margin: $tamanoPad;
+    }
+    .postularmemas{
+        text-align: center;
     }
 
     /***Media Marca ***/
@@ -281,20 +394,28 @@ input{
         padding: 10px;
         margin: 10px;
     }
+    .nav-link {
+        font-size: 16px;
+    }
 }
-@media screen and (min-width: 480px) {}
-
-@media screen and (min-width: 600px) {}
 
 @media screen and (min-width: 768px) {
     .navbar-expand-md .navbar-collapse {
         @include flex-wrap-row-center-space-around;
         white-space: 16px;
     }
+    .formu-section{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .postularme{
+        width: 60%;
+    }
+    .postularmemas{
+        text-align: center;
+    }
 }
-
-@media screen and (min-width: 1024px) {}
-
 @media screen and (min-width: 1200px) {
     /***Media Index***/
     /***Media producto***/
@@ -316,14 +437,8 @@ input{
     .producto-aside{
         display: block;
     }
-
     /***Media ayuda***/
     /***Media formulario***/
-    .postularme{
-        padding: 30px;
-        margin: $tamanoPad;
-    }
-    
     /***Media MARCA***/
     /***Media sesion***/
     h2{
@@ -331,5 +446,8 @@ input{
         a{
             font-size: $tamanoTipo;
         }
+    }
+    .nav-link {
+        font-size: 24px;
     }
 }

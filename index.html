@@ -18,11 +18,17 @@
             </div>
             <div class="inicio-input-group">
                 <input type="text" class="form-control" placeholder="Buscar producto"aria-describedby="button-addon2">
-                <button class="btn btn-dark animacionboton"id="button-addon2"><span>Buscar</span></button>
+                
+                <button class="btn btn-dark animacionboton"id="button-addon2"><span>Buscar</span>
+                    
+                </button>
             </div>
             <div class="inicio">
                 <form action="./pages/INICIAR-SESION.html">
-                    <button class="animacionboton"><span>INICIAR SESION</span></button>
+                    
+                    <button class="animacionboton"><span>INICIAR SESION</span>
+                        
+                    </button>
                 </form>
             </div>
             <div class="inicio">
@@ -59,7 +65,11 @@
         </div>
         <section class="index-section">
             <div>
-                <img src="./imagenes/telefono.png" class="img-fluid" alt="imagen principal">
+                <picture>
+                    <source media="(min-width: 689px)" srcset="./imagenes/telefono.png">
+                    <source media="(max-width: 440px)" srcset="./imagenes/telefono340_300.PNG" >
+                    <img src="./imagenes/telefono.png" class="img-fluid" alt="imagen principal">
+                </picture>
             </div>
             <div class="container-fluid  img-thumbnail">
                 <div class="col-12">
