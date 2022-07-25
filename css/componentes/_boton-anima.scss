@@ -1,0 +1,179 @@
+@import"colores";
+@import "variables";
+@import"mapas";
+/***Botones generales ***/
+.animacionboton input{
+    text-decoration: none;
+    color: $colorCuarto;
+}
+.animacionboton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+	width: 200px;
+	height: 30px;
+	background:$colorTercero ;
+	color: $colorCuarto;
+	font-size: $tamano_15;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden
+}
+.animacionboton{
+span{
+    position: relative;
+    transition: .3s ease all;
+    z-index: 2;
+}
+}
+.animacionboton::after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .3s ease-in-out all;
+	border-radius: 190px;
+	transform-origin: center;
+}
+.animacionboton:hover::after {
+	transform: scale(100);
+	background: $colorSecundario;
+}
+.animacionboton:hover {
+	background: $colorSecundario_b; 
+}
+
+/**** Botones de productos ****/
+.cardprod{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	align-items: center;
+}
+.card-body{
+	position: center;
+}
+.animacionbotonpro {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	align-items: center;
+}
+/***Botones producto***/
+.animacionbotonpro {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	padding: 20px;
+	width: 200px;
+	height: 30px;
+	background: #000000;
+	color: white;
+	font-size: 15px;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: 0.3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.animacionbotonpro{
+	span{
+		position: relative;
+		transition: .3s ease all;
+		z-index: 2;
+	}
+	}
+
+.animacionbotonpro span {
+	transition: 0.4s ease-in-out all;
+	position: absolute;
+	left: 23%;
+}
+
+.animacionbotonpro .iconopro {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: 0.3s ease-in-out all;
+	opacity: 0;
+}
+
+.animacionbotonpro svg {
+	color: white;
+	min-width: 35px;
+	height: 35px;
+}
+
+.animacionbotonpro:hover {
+	background: rgb(253, 97, 26);
+}
+
+.animacionbotonpro:hover .iconopro {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+
+.animacionbotonpro:hover span {
+	left: 20px;
+}
+
+/**** Botones de formulario ****/
+.animacionbotonfor{
+	width: 200px;
+	height: 30px;
+	background: $colorTercero;
+	color: $colorCuarto;
+	font-size: $tamano_15;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden
+}
+.animacionbotonfor{
+span{
+    position: relative;
+    transition: .3s ease all;
+    z-index: 2;
+}
+}
+.animacionbotonfor::after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .3s ease-in-out all;
+	border-radius: 190px;
+	transform-origin: center;
+}
+.animacionbotonfor:hover::after {
+	transform: scale(100);
+	background: $colorSecundario;
+}
+.animacionbotonfor:hover {
+	background: $colorSecundario_b; 
+}

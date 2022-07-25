@@ -1,0 +1,53 @@
+@import"colores";
+@import "variables";
+@import"mapas";
+/***Redes ***/
+@each $red, $color in $coloresRedes {
+    .#{$red}{
+        background-color:$color ;
+    }
+    
+}
+/***Aqui aplicamos extend ***/
+.telegrama{
+    @extend .cir;
+    background-color: map-get($coloresRedes, twitter)
+}
+/***Productos***/
+.menulateral{
+    font-size: $tamano_16;
+    text-transform: none;
+}
+
+/***ayuda celdas***/
+#accordionExample{
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+}
+.ayudaxd{
+    width: auto;
+    right: auto;
+    margin:10px 50px 10px 50px;
+}
+/***formulario***/
+.postularme{
+    background-color: $colorCuarto;
+    border-radius: $tamano_15;
+}
+.postularmemas{
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    border-radius: $tamano_15;
+}
+
+/***sesion***/
+.sesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colorCuarto;
+    border-radius: $tamano_15;
+    padding: $tamano_20;
+}

@@ -1,0 +1,99 @@
+@import"colores";
+@import "variables";
+@import"mapas";
+/***Estilos generales ***/
+body{
+    background-color: $colorPrimario;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer{
+    background-color: $colorSecundario;
+}
+nav{
+    background-color: $colorSecundario;
+}
+.producto-nav{
+    background-color:$colorSecundario;
+}
+.nav-link{
+    font-size: $tamano_24;
+}
+ul{
+    list-style-type: none;
+    font-size:$tamano_24;
+    text-transform:uppercase ;
+    li{
+        display: inline;
+    }
+}
+.link-formu{
+    font-size: 16px;
+}
+a{
+    color: $colorTercero;
+}
+h2{
+    color: $colorTercero;
+}
+.nav-link{
+    color: $colorTercero;
+}
+.link-formu{
+    &:hover{
+        color: $colorCuarto;
+    }
+}
+.nav-link{
+    &:hover{
+        color: $colorCuarto;
+    }
+}
+.aside-textos{
+    text-decoration: none;
+    &:hover{
+        color: $colorSecundario;
+    }
+}
+header{
+    padding: 5px;
+    margin: 0px
+}
+nav{
+    
+    ul{
+        a{
+            padding: 30px;  
+        } 
+    } 
+}
+.cir{
+    border-radius: 50px;
+}
+/***imput engeneral***/
+input{
+    border-radius: 5px;
+}
+.inicio-input-group{
+    display: flex;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+h4{
+    font-size: 18px;
+}
+/***Cards-Producto***/
+.cardprod{
+    margin-bottom: 1em;
+}
+.card-title{
+    padding: 10px;
+}
+/***Accordion-Aside-ayuda***/
+.accordion {
+    --bs-accordion-active-bg: rgba(253, 149, 102);
+    --bs-accordion-active-color: $colortercero;
+    --bs-accordion-btn-focus-box-shadow: none;
+}

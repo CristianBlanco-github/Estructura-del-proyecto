@@ -1,0 +1,8 @@
+/***Mixin***/
+@mixin flex-wrap-row-center-space-around{
+	display:flex;
+    flex-wrap: wrap;
+	flex-direction:row;
+	align-items:center;
+    justify-content: space-around;
+}

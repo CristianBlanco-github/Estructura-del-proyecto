@@ -1,0 +1,173 @@
+@import"colores";
+@import "variables";
+@import"mapas";
+@import"mixin";
+/***index***/
+.index-header{
+    @include flex-wrap-row-center-space-around;
+}
+/***Producto diseño grid***/
+.producto-header{
+    grid-area: producto-header;
+    justify-content: space-between;
+}
+.producto-footer{
+    grid-area: producto-footer;
+    justify-content: center;
+}
+.producto-nav{
+    grid-area: producto-nav;
+}
+.producto-aside{
+    grid-area: producto-aside;
+}
+.producto-section{
+    grid-area:producto-section;
+}
+.producto-header{
+    @include flex-wrap-row-center-space-around;
+}
+
+.producto-main{
+    display: grid;
+}
+
+/***Ayuda diseño***/
+.ayuda-header{
+    @include flex-wrap-row-center-space-around;
+}
+
+/***Marca diseño***/
+.marca-header{
+    @include flex-wrap-row-center-space-around;
+}
+
+/***Sesion area***/
+.sesion-header{
+    @include flex-wrap-row-center-space-around;
+}
+
+/***Formulario area***/
+.formu-header{
+    @include flex-wrap-row-center-space-around;
+}
+
+@media screen and (min-width: 320px) {    
+    /***Media Producto***/
+    .producto-main{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        column-gap: $tamano_15;
+        row-gap: $tamano_15;
+        grid-template-areas: "producto-header" "producto-nav" "producto-section" "producto-footer";
+    }
+    .producto-section {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: $tamano_15;
+        row-gap: $tamano_15;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    .producto-aside{
+        display: none;
+    }
+    /***Media ayuda***/
+    #menuBurgerayuda{
+        margin-left: 10px;
+    }
+    /***Media formulario***/
+    .formu-section{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .postularme{
+        width: 100%;
+        right: 50%;
+        padding: 30px;
+        margin: $tamano_15;
+    }
+    .postularmemas{
+        text-align: center;
+    }
+    /***Media sesion***/
+    h2{
+        font-size: $tamano_16;
+        a{
+            font-size: $tamano_16;
+        } 
+    }
+    .sesion{
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+    .nav-link {
+        font-size: $tamano_16;
+    }
+    .rounded-start{
+        max-width: 50%;
+        height: auto;
+    }
+    
+}
+@media screen and (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        @include flex-wrap-row-center-space-around;
+        white-space: 16px;
+    }
+    .formu-section{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .postularme{
+        width: 60%;
+    }
+    .postularmemas{
+        text-align: center;
+    }
+    .rounded-start {
+        max-width: 80%;
+        height: auto;
+    }
+    .nav-link {
+        font-size: $tamano_20;
+    }
+}
+@media screen and (min-width: 1200px) {
+    /***Media producto***/
+    .producto-main{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        column-gap: 10px;
+        row-gap: $tamano_15;
+        grid-template-areas: "producto-header producto-header" "producto-nav producto-nav" "producto-aside producto-section" "producto-footer producto-footer";
+    }
+    .producto-section {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: $tamano_15;
+        row-gap: $tamano_15;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    .producto-aside{
+        display: block;
+    }
+    /***Media formulario***/
+    h2{
+        font-size: $tamano_24;
+        a{
+            font-size: $tamano_24;
+        }
+    }
+    .nav-link {
+        font-size: $tamano_24;
+    }
+    .rounded-start {
+        max-width: 100%;
+        height: auto;
+    }
+}

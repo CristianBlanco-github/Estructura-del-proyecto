@@ -1,7 +1,5 @@
 @charset "UTF-8";
-/* Vars */
-/***Mapa***/
-/***Mixin***/
+/*** Vars ***/ /***Mapa***/
 /***Estilos generales ***/
 body {
   background-color: rgb(238, 238, 238);
@@ -77,28 +75,42 @@ nav ul a {
   border-radius: 50px;
 }
 
-/***Redes ***/
-.facebook {
-  background-color: rgb(3, 81, 189);
+/***imput engeneral***/
+input {
+  border-radius: 5px;
 }
 
-.whatsapp {
-  background-color: rgb(1, 209, 149);
+.inicio-input-group {
+  display: flex;
 }
 
-.istagram {
-  background-color: rgb(237, 83, 107);
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.twitter {
-  background-color: rgb(0, 221, 229);
+h4 {
+  font-size: 18px;
 }
 
-/***Aqui aplicamos extend ***/
-.telegrama {
-  background-color: rgb(0, 221, 229);
+/***Cards-Producto***/
+.cardprod {
+  margin-bottom: 1em;
 }
 
+.card-title {
+  padding: 10px;
+}
+
+/***Accordion-Aside-ayuda***/
+.accordion {
+  --bs-accordion-active-bg: rgba(253, 149, 102);
+  --bs-accordion-active-color: $colortercero;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+/*** Vars ***/ /***Mapa***/
 /***Botones generales ***/
 .animacionboton input {
   text-decoration: none;
@@ -155,6 +167,27 @@ nav ul a {
 }
 
 /**** Botones de productos ****/
+.cardprod {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.card-body {
+  position: center;
+}
+
+.animacionbotonpro {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+/***Botones producto***/
 .animacionbotonpro {
   display: flex;
   align-items: center;
@@ -199,7 +232,7 @@ nav ul a {
 
 .animacionbotonpro svg {
   color: white;
-  width: 35px;
+  min-width: 35px;
   height: 35px;
 }
 
@@ -261,24 +294,27 @@ nav ul a {
   background: rgb(168, 64, 17);
 }
 
-/***index***/
-.index-header {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+/*** Vars ***/ /***Mapa***/
+/***Redes ***/
+.facebook {
+  background-color: rgb(3, 81, 189);
 }
 
-/***imput engeneral***/
-.inicio-input-group {
-  display: flex;
+.whatsapp {
+  background-color: rgb(1, 209, 149);
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.istagram {
+  background-color: rgb(237, 83, 107);
+}
+
+.twitter {
+  background-color: rgb(0, 221, 229);
+}
+
+/***Aqui aplicamos extend ***/
+.telegrama {
+  background-color: rgb(0, 221, 229);
 }
 
 /***Productos***/
@@ -321,6 +357,16 @@ nav ul a {
   background-color: white;
   border-radius: 15px;
   padding: 20px;
+}
+
+/*** Vars ***/ /***Mapa***/ /***Mixin***/
+/***index***/
+.index-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /***Producto diseño grid***/
@@ -367,7 +413,7 @@ nav ul a {
   justify-content: space-around;
 }
 
-/***Marca diseño grid***/
+/***Marca diseño***/
 .marca-header {
   display: flex;
   flex-wrap: wrap;
@@ -404,7 +450,6 @@ nav ul a {
     row-gap: 15px;
     grid-template-areas: "producto-header" "producto-nav" "producto-section" "producto-footer";
   }
-
   .producto-section {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
@@ -414,35 +459,28 @@ nav ul a {
     justify-items: stretch;
     align-items: stretch;
   }
-
   .producto-aside {
     display: none;
   }
-
   /***Media ayuda***/
   #menuBurgerayuda {
     margin-left: 10px;
   }
-
   /***Media formulario***/
   .formu-section {
     display: flex;
     justify-content: center;
     width: 100%;
   }
-
   .postularme {
     width: 100%;
     right: 50%;
     padding: 30px;
-    margin: 20px;
+    margin: 15px;
   }
-
   .postularmemas {
     text-align: center;
   }
-
-  /***Media Marca ***/
   /***Media sesion***/
   h2 {
     font-size: 16px;
@@ -450,15 +488,17 @@ nav ul a {
   h2 a {
     font-size: 16px;
   }
-
   .sesion {
     text-align: center;
     padding: 10px;
     margin: 10px;
   }
-
   .nav-link {
     font-size: 16px;
+  }
+  .rounded-start {
+    max-width: 50%;
+    height: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -470,33 +510,35 @@ nav ul a {
     justify-content: space-around;
     white-space: 16px;
   }
-
   .formu-section {
     display: flex;
     justify-content: center;
     width: 100%;
   }
-
   .postularme {
     width: 60%;
   }
-
   .postularmemas {
     text-align: center;
   }
+  .rounded-start {
+    max-width: 80%;
+    height: auto;
+  }
+  .nav-link {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 1200px) {
-  /***Media Index***/
   /***Media producto***/
   .producto-main {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto auto;
     -moz-column-gap: 10px;
          column-gap: 10px;
-    row-gap: 20px;
+    row-gap: 15px;
     grid-template-areas: "producto-header producto-header" "producto-nav producto-nav" "producto-aside producto-section" "producto-footer producto-footer";
   }
-
   .producto-section {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
@@ -506,23 +548,21 @@ nav ul a {
     justify-items: stretch;
     align-items: stretch;
   }
-
   .producto-aside {
     display: block;
   }
-
-  /***Media ayuda***/
   /***Media formulario***/
-  /***Media MARCA***/
-  /***Media sesion***/
   h2 {
     font-size: 24px;
   }
   h2 a {
     font-size: 24px;
   }
-
   .nav-link {
     font-size: 24px;
   }
-}/*# sourceMappingURL=style.css.map */
+  .rounded-start {
+    max-width: 100%;
+    height: auto;
+  }
+}/*# sourceMappingURL=estilo.css.map */
